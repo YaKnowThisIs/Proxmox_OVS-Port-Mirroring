@@ -1,7 +1,5 @@
 # Port TAP (mirroring) sur Proxmox avec Open vSwitch
 
-# Port Mirroring avec Open vSwitch sur Proxmox
-
 Bienvenue dans ce dépôt GitHub dédié à la mise en place d'un port mirroring avec Open vSwitch sur une plateforme Proxmox. Ce guide couvre l'installation et la configuration nécessaires pour configurer le port mirroring afin d'analyser le trafic réseau.
 
 ## 🚀 Contenu du Dépôt
