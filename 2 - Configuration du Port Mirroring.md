@@ -99,8 +99,9 @@ iface ens19 inet manual
 systemctl restart networking
 ```
 
-## Étape 6 : Écouter le Trafic (sur la VM)
+## Étape 6 : Écouter le Trafic (sur la VM de surveillance)
 Utiliser tcpdump pour écouter le trafic sur l’interface ens19 (liée via OVS à tap2002i1)
 ```
 tcpdump -i ens19
 ```
+Générer du trafic depuis une VM située dans le réseau de l'interface TAP de la VM de surveillance
