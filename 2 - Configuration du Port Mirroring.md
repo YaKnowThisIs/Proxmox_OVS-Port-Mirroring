@@ -1,6 +1,10 @@
 # 2 - Configuration du Port Mirroring
 
 ## Étape 1 : Créer le script hook
+Ce script va se charger :
+- D'activer le port mirroring sur la VM lors du démarrage de cette dernière
+- De désactiver le port mirroring sur la VM lors de l'arrêt de cette dernière
+  
 ```
 nano /var/lib/vz/snippets/config_mirroring_.sh
 ```
@@ -60,3 +64,43 @@ elif [[ "$PHASE" == "pre-stop" ]]; then
 fi
 ```
 - Sauvegarder et quitter
+
+## Étape 2 : Rendre le script exécutable
+```
+chown root:root
+chmod 750 /var/lib/vz/snippets/config_mirroring_.sh
+```
+
+## Étape 3 : Affecter le script à la VM (ici il s’agit de l’ID 2002)
+```
+qm set 2002 --hookscript local:snippets/config_mirroring_.sh
+```
+
+## Étape 4 : Vérifier le Miroir (sur Proxmox)
+```
+ovs-vsctl list Mirror
+```
+
+## Étape 5 : Configurer les paramètres réseau de la VM (sur la VM)
+- Configurer les paramètres de la carte réseau
+```
+nano /etc/network/interfaces
+```
+Exemple de configuration de l’interface :
+```
+allow-hotplug ens19
+auto ens19
+iface ens19 inet manual
+	up ip link set ens19 promisc on
+	down ip link set ens19 promisc off
+```
+- Redémarrer le service réseau pour appliquer les modifications
+```
+systemctl restart networking
+```
+
+## Étape 6 : Écouter le Trafic (sur la VM)
+Utiliser tcpdump pour écouter le trafic sur l’interface ens19 (liée via OVS à tap2002i1)
+```
+tcpdump -i ens19
+```
