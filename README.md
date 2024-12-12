@@ -7,7 +7,7 @@ Bienvenue dans ce dépôt GitHub dédié à la mise en place d'un port mirroring
 ### 1 - 🛠️ Préparatifs : Installation et Configuration d'Open vSwitch
 Guide étape par étape pour installer Open vSwitch sur Proxmox et configurer un switch virtuel.
 
-📜 Lien vers la procédure : ([Installation et Configuration d'Open vSwitch](https://github.com/YaKnowThisIs/Proxmox_OVS-Port-Mirroring/blob/main/1%20-%20Pr%C3%A9paratifs%20:%20Installation%20et%20Configuration%20d'Open%20vSwitch.md)
+📜 Lien vers la procédure : ([Installation et Configuration d'Open vSwitch](https://github.com/YaKnowThisIs/Proxmox_OVS-Port-Mirroring/blob/main/1%20-%20Pr%C3%A9paratifs%20:%20Installation%20et%20Configuration%20d'Open%20vSwitch.md))
 
 ### 2 - ⚙️ Configuration du Port Mirroring
 Configuration détaillée pour activer le port mirroring
@@ -16,7 +16,7 @@ Configuration détaillée pour activer le port mirroring
 - Configuration de l'interface réseau de la VM
 - Validation et tests
 
-📜 Lien vers la procédure : [Configuration du Port Mirroring](#)
+📜 Lien vers la procédure : ([Configuration du Port Mirroring](https://github.com/YaKnowThisIs/Proxmox_OVS-Port-Mirroring/blob/main/2%20-%20Configuration%20du%20Port%20Mirroring.md))
 
 ## 📖 Prérequis
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
