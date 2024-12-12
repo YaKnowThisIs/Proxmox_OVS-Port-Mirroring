@@ -1,6 +1,7 @@
 # 1 - Préparatifs : Installation et Configuration d'Open vSwitch
 
 > !!! Les exemples sont proposés avec vmbr03 et la VM ID 2002 (à adapter selon votre configuration) !!!
+
 > Cette procédure a été testée et validée sur Proxmox 8.2.7
 
 ## Étape 1 : Installer Open vSwitch
